@@ -314,5 +314,6 @@ void iosurface_remove_property(io_connect_t surface,uint32_t surface_id,uint32_t
                  NULL, NULL,
                  &_output, &output_cnt);
 
+    if(kr != KERN_SUCCESS) abort();
     assert(kr == KERN_SUCCESS);
 }

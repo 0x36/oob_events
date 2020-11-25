@@ -41,7 +41,8 @@ void prepare_device_memory()
         // config for 2GB RAM devices like iPhone 7
         if(!strcmp(u.machine,"iPhone9,3")) {
                 kalloc_map_size = 0x03bd23ff;
-                kalloc_map_size = 80 MB;
+                kalloc_map_size = 60 MB;
+                //kalloc_map_size = 80 MB;
                 zone_map_size   = 0x2cddc000; //
                 zone_map_size = 500 MB;//600 MB ;//720 MB - 120 MB;
                 oob_indexes = calloc(3,sizeof(uint64_t));
@@ -64,7 +65,6 @@ void prepare_device_memory()
 
                 // All device with 4GB RAM can be put here
         } else if(!strcmp(u.machine,"iPhone12,1")) {
-                printf("iPhone 11 \n");
                 accel_alloc_size = 0x600;
                 oob_indexes = calloc(3,sizeof(uint64_t));
 
@@ -75,9 +75,9 @@ void prepare_device_memory()
                 zone_map_size   = 1150 MB; // size with adjustment to avoid zone map exhaust
 
                 kalloc_map_size = 0x6f745ff;
-                //kalloc_map_size = 140 MB;
-                kalloc_map_size = 160 MB;
-                bar = 0x3100000;
+                kalloc_map_size = 120 MB;
+                //kalloc_map_size = 160 MB;
+                bar = 0x1100000;
                 iter = 0x400;//00;
                 //loop = 5;
 

@@ -61,7 +61,6 @@ enum kstruct_offset {
     IOUSERCLIENT_AGXGLCONTEXT_SHM_SIZE, // shm2 size ?
 
     IOSURFACE_INDEXEDTIMESTAMP,
-
 };
 
 int koffset(enum kstruct_offset offset);
